@@ -1,0 +1,41 @@
+<div class="=">
+    <div class="">
+        <div class="products-container">
+            <div class="products-header">
+                <h1>Cart</h1>
+                <button (click)="onNoClick()">Close</button>
+            </div>
+            <div class="products-list">
+                <ul>
+                    <li class="product-item">
+                        <span>
+                        </span>
+                        <span class="product-list-detail">
+                            <h1>Name</h1>
+                            <h2>Description</h2>
+                        </span>
+                        <span>Price</span>
+                        <span>Count</span>
+                    </li>
+                    <li class="product-item" *ngFor="let item of data?.cartData">
+                        <span>
+                            <img class="fruit-image" [src]="item.img" alt="" srcset="" />
+                        </span>
+                        <span class="product-list-detail">
+                            <h1>{{item.name}}</h1>
+                            <h2>{{item.description}}</h2>
+                        </span>
+                        <span>{{item.price}}</span>
+                        <span>{{item.count}}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="products-footer">
+                <div class="products-footer-detail">
+                    <span> {{data?.cartLength}} Item(s) </span>
+                    <span> ${{data?.cartTotal}} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
